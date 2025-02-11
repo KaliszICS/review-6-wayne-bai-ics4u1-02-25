@@ -1,35 +1,44 @@
 
 class Notes {
 	public static void main(String[] args) {
-		System.out.println(result);
-		System.out.println(add(5, 6));
+		int num = 3;
+		//values that are provided to functions/methods are called arguments
+		System.out.println(add(num, 5));
+		System.out.println(add(2, 4));
+		System.out.println(add(1, 1));
+		System.out.println(num);
 
-		System.out.println(addS("root"));
-		printString("This will print");
+		int result = add(2, 7);
+		System.out.println(result);
+
+		printString("Hello");
+
 	}
 
-	//create a function/method definition it needs to be outside of your main but inside your class
-	//return type and return must match
-	
+	//Create functions in java
+	//Create a function, it needs to be outside your main method
+	//A function definition does not run until you use it
+
+	//public - makes it accessible by others
+	//static - this makes it accessible without needing to create an object
+	//int - return type
+	//int addNum1, int addNum2 - parameters (inputs)
+	//return is what gets send back from the function (output)
+	//the return value must match the datatype you specified in your definition
 	public static int add(int addNum1, int addNum2) {
 		int additionResult;
+		addNum1 = addNum1 + 1;
 		additionResult = addNum1 + addNum2;
-		return additionResult; //What will come back from the fuction and replace it.  Returns stop your function
+		return additionResult; //returning ends your function
 	}
 
-	public static String addS(String word) {
-		String newWord;
-		newWord = word + "s";
-		return newWord;
-	}
-
-	//does not return anything
+	//void type functions do not return anything and do not require a return
 	public static void printString(String word) {
 		System.out.println(word);
 	}
 
-	//parameters and return type don't need to match
-	public static boolean concatAll(int num, String word, char c) {
+	//only the return type has to match, parameters can be anything
+	public static boolean randomFunction(int num, String word, char c) {
 		return true;
 	}
 }
